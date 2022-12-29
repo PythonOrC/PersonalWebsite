@@ -37,7 +37,23 @@
     <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" />
     <!-- Theme style  -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- GitHub-Style Markdown  -->
+    <link rel="stylesheet" href="{% static 'css/github-markdown.css' %}" />
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
 
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    </style>
     <!-- Modernizr JS -->
     <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
     <!-- FOR IE9 below -->
