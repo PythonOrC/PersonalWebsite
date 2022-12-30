@@ -39,6 +39,11 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- GitHub-Style Markdown  -->
     <link rel="stylesheet" href="{% static 'css/github-markdown.css' %}" />
+    <!-- Codehilite-Style Markdown  -->
+    <link rel="stylesheet" href="{% static 'css/codehilite.css' %}" />
+    <!-- Parallax Effect  -->
+    <link rel="stylesheet" href="{% static 'css/parallax-effect.css' %}" />
+    
     <style>
       .markdown-body {
         box-sizing: border-box;
@@ -52,6 +57,15 @@
         .markdown-body {
           padding: 15px;
         }
+      }
+      .banner {
+        width:90%;
+        max-height: 40vh;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: static;
       }
     </style>
     <!-- Modernizr JS -->
