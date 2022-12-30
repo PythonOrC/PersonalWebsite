@@ -1,4 +1,17 @@
-{% extends 'base.html' %} {% load md_display_extras %} {% load static %} {%block title%}{{post.title}}{%endblock %} {% block main_content %}
+{% extends 'base.html' %} {% load md_display_extras %} {% load static %} {%block title%}{{post.title}}{%endblock %} 
+{% block custom_style %}
+  .banner {
+    width:90%;
+    max-height: 40vh;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: static;
+  }
+{% endblock %}
+
+{% block main_content %}
 <div class="fh5co-narrow-content">
   <div class="row row-bottom-padded-md">
     <div class="container-fluid markdown-body">
