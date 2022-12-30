@@ -1,19 +1,20 @@
-{% extends 'base.html' %} 
-{% load md_display_extras %}
-{% load static %} 
-{% block title%}{{post.title}}{%endblock %} {% block main_content %}
+{% extends 'base.html' %} {% load md_display_extras %} {% load static %} {%block title%}{{post.title}}{%endblock %} {% block main_content %}
 <div class="fh5co-narrow-content">
-    <div class="row row-bottom-padded-md">
-        <img src="{{ post.image.url }}" class="img-responsive img-rounded" alt="{{ post.title }}">
-        <div class="row row-bottom-padded-md"></div>
-        <div class="container-fluid markdown-body" >
-            <div class="row">
-                <div class="fh5co-heading text-center" >
-                        <h1>{{post.title }}</h1>
-                </div>
-            </div>
-            {{post.content | convert_markdown | safe}}
+  <div class="row row-bottom-padded-md">
+    <div class="container-fluid markdown-body">
+      <div>
+        <image src="{{post.image.url}}" class="banner" alt="Image" />
+      </div>
+      {% comment %}
+      <div class="row row-bottom-padded-md"></div>
+      {% endcomment %}
+      <div>
+        <div class="fh5co-heading text-center">
+          <h1>{{post.title }}</h1>
         </div>
+        {{post.content | convert_markdown | safe}}
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}
